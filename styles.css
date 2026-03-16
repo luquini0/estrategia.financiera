@@ -5,7 +5,7 @@ box-sizing:border-box;
 }
 
 body{
-background:#5777ca;
+background:#0099ff;
 color:white;
 overflow-x:hidden;
 line-height:1.6;
@@ -98,7 +98,7 @@ align-items:center;
 opacity: 0.98;
 padding:18px 60px;
 
-background:#163991;
+background:#4e6eff;
 
 border-bottom:1px solid rgba(255,255,255,0.08);
 
