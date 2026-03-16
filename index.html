@@ -14,6 +14,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 </head>
 
 <body>
@@ -35,7 +37,11 @@
 <a href="#planes">Planes</a>
 <a href="#beneficios">Beneficios</a>
 <a href="#testimonios">Opiniones</a>
-<a href="#cta">Acceso</a>
+<a href="#contacto">Contacto</a>
+
+<button class="nav-login" id="loginBtn">Login</button>
+<button class="nav-login" id="registerBtn">Registro</button>
+
 </div>
 
 <div class="hamburger" id="hamburger">
@@ -77,17 +83,17 @@ Ver planes
 <div class="hero-stats">
 
 <div>
-<strong>+12K</strong>
+<strong class="stat-number" data-target="12000">0</strong>
 <span>Miembros</span>
 </div>
 
 <div>
-<strong>35</strong>
+<strong class="stat-number" data-target="35">0</strong>
 <span>Países</span>
 </div>
 
 <div>
-<strong>8 años</strong>
+<strong class="stat-number" data-target="8">0</strong>
 <span>Experiencia</span>
 </div>
 
@@ -233,9 +239,9 @@ Accede a estrategias profesionales
 y construye un sistema financiero sólido.
 </p>
 
-<a class="primary-btn large" href="#planes">
+<button class="primary-btn large" id="openSignup">
 Acceder ahora
-</a>
+</button>
 
 </section>
 
@@ -269,6 +275,67 @@ Acceder ahora
 </div>
 
 </footer>
+
+<div class="signup-modal" id="authModal">
+
+<div class="signup-box">
+
+<span class="close-modal" id="closeAuth">&times;</span>
+
+<div class="auth-tabs">
+
+<button class="auth-tab active" data-tab="loginTab">
+Login
+</button>
+
+<button class="auth-tab" data-tab="registerTab">
+Registro
+</button>
+
+</div>
+
+
+<!-- LOGIN -->
+
+<div class="auth-content active" id="loginTab">
+
+<form id="loginForm">
+
+<input type="email" id="loginEmail" placeholder="Email" required>
+
+<input type="password" id="loginPassword" placeholder="Contraseña" required>
+
+<button type="submit" class="primary-btn small">
+Ingresar
+</button>
+
+</form>
+
+</div>
+
+
+<!-- REGISTER -->
+
+<div class="auth-content" id="registerTab">
+
+<form id="signupForm">
+
+<input type="email" id="email" placeholder="Email" required>
+
+<input type="password" id="password" placeholder="Contraseña" required>
+
+<button type="submit" class="primary-btn small">
+Crear cuenta
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
 
 <script src="script.js"></script>
 
