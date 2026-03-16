@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Perfil</title>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="perfil.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+
+
+<body>
+
+<div class="animated-bg"></div>
+
+
+<!-- NAVBAR (MISMO QUE INDEX) -->
+
+<nav class="navbar">
+
+<div class="logo">
+<img src="images/flecha4.png">
+<h1 class="title">EstrategiaFinanciera</h1>
+</div>
+
+<div class="menu">
+
+<button id="logout" class="nav-login">
+Cerrar sesión
+</button>
+
+</div>
+
+</nav>
+
+
+
+<!-- HEADER PERFIL -->
+
+<section class="profile-header">
+
+<img id="avatar" src="https://via.placeholder.com/120">
+
+<div>
+
+<h1 id="userEmail">Usuario</h1>
+
+<p>Miembro de EstrategiaFinanciera</p>
+
+</div>
+
+</section>
+
+
+
+<!-- DASHBOARD -->
+
+<section class="dashboard">
+
+
+<!-- TABS -->
+
+<div class="tabs">
+
+<button class="tab active" data-tab="overview">
+Resumen
+</button>
+
+<button class="tab" data-tab="profile">
+Perfil
+</button>
+
+<button class="tab" data-tab="plans">
+Planes
+</button>
+
+</div>
+
+
+
+<!-- TAB RESUMEN -->
+
+<div class="tab-content active" id="overview">
+
+<div class="dashboard-grid">
+
+<div class="card">
+
+<h3>Plan actual</h3>
+
+<p id="userPlan">Starter</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Contenido desbloqueado</h3>
+
+<p>12 módulos</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Miembro desde</h3>
+
+<p id="memberDate">2026</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- TAB PERFIL -->
+
+<div class="tab-content" id="profile">
+
+<div class="profile-form">
+
+<label>Foto de perfil</label>
+
+<input type="file" id="avatarUpload">
+
+
+<input type="text" id="name" placeholder="Nombre">
+
+
+<input type="text" id="country" placeholder="País">
+
+
+<button id="saveProfile" class="primary-btn small">
+
+Guardar cambios
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- TAB PLANES -->
+
+<div class="tab-content" id="plans">
+
+<div class="plans-grid">
+
+
+<div class="plan-card">
+
+<h3>Starter</h3>
+
+<p>$0</p>
+
+<button class="secondary-btn">
+
+Activo
+
+</button>
+
+</div>
+
+
+
+<div class="plan-card featured">
+
+<h3>Pro</h3>
+
+<p>$29</p>
+
+<button class="primary-btn small">
+
+Actualizar
+
+</button>
+
+</div>
+
+
+
+<div class="plan-card">
+
+<h3>Elite</h3>
+
+<p>$79</p>
+
+<button class="primary-btn small">
+
+Actualizar
+
+</button>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+</section>
+
+
+
+<script src="perfil.js"></script>
+
+</body>
+</html>

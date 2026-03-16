@@ -1,0 +1,108 @@
+.profile-header{
+display:flex;
+align-items:center;
+gap:25px;
+padding:120px 20px 40px 20px;
+max-width:900px;
+margin:auto;
+}
+
+.profile-header img{
+width:120px;
+height:120px;
+border-radius:100px;
+border:3px solid #10c668;
+object-fit:cover;
+}
+
+.dashboard{
+max-width:900px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* TABS */
+
+.tabs{
+display:flex;
+gap:25px;
+border-bottom:1px solid rgba(255,255,255,0.2);
+margin-bottom:40px;
+}
+
+.tab{
+background:none;
+border:none;
+color:white;
+padding:12px 10px;
+cursor:pointer;
+opacity:0.6;
+font-size:16px;
+}
+
+.tab.active{
+opacity:1;
+border-bottom:2px solid #10c668;
+}
+
+/* CONTENT */
+
+.tab-content{
+display:none;
+}
+
+.tab-content.active{
+display:block;
+}
+
+/* DASHBOARD CARDS */
+
+.dashboard-grid{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:16px;
+width:250px;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+/* PROFILE FORM */
+
+.profile-form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:300px;
+}
+
+.profile-form input{
+padding:10px;
+border-radius:6px;
+border:none;
+}
+
+/* PLANES */
+
+.plans-grid{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.plan-card{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:16px;
+width:220px;
+text-align:center;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+.plan-card.featured{
+border:2px solid #10c668;
+}
