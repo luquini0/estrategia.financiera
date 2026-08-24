@@ -2,23 +2,34 @@
 display:flex;
 align-items:center;
 gap:25px;
-padding:120px 20px 40px 20px;
+padding:130px 20px 40px 20px;
 max-width:900px;
 margin:auto;
 }
 
 .profile-header img{
-width:120px;
-height:120px;
+width:96px;
+height:96px;
 border-radius:100px;
-border:3px solid #10c668;
+border:2px solid var(--accent);
 object-fit:cover;
+background:var(--bg-soft);
+}
+
+.profile-header h1{
+font-size:22px;
+}
+
+.profile-header p{
+color:var(--text-dim);
+font-size:14px;
+margin-top:2px;
 }
 
 .dashboard{
 max-width:900px;
 margin:auto;
-padding:40px 20px;
+padding:20px 20px 80px;
 }
 
 /* TABS */
@@ -26,23 +37,25 @@ padding:40px 20px;
 .tabs{
 display:flex;
 gap:25px;
-border-bottom:1px solid rgba(255,255,255,0.2);
+border-bottom:1px solid var(--border);
 margin-bottom:40px;
 }
 
 .tab{
 background:none;
 border:none;
-color:white;
-padding:12px 10px;
+color:var(--text-dim);
+padding:12px 4px;
 cursor:pointer;
-opacity:0.6;
-font-size:16px;
+font-size:14.5px;
+font-weight:500;
+border-bottom:2px solid transparent;
+transition:.2s ease;
 }
 
 .tab.active{
-opacity:1;
-border-bottom:2px solid #10c668;
+color:var(--text);
+border-bottom:2px solid var(--accent);
 }
 
 /* CONTENT */
@@ -64,11 +77,24 @@ flex-wrap:wrap;
 }
 
 .card{
-background:rgba(255,255,255,0.05);
-padding:30px;
-border-radius:16px;
+background:var(--surface);
+padding:28px;
+border-radius:14px;
 width:250px;
-border:1px solid rgba(255,255,255,0.1);
+border:1px solid var(--border);
+}
+
+.card h3{
+font-size:14px;
+color:var(--text-dim);
+font-weight:500;
+margin-bottom:10px;
+}
+
+.card p{
+font-size:20px;
+font-family:'Space Grotesk',sans-serif;
+font-weight:600;
 }
 
 /* PROFILE FORM */
@@ -76,33 +102,60 @@ border:1px solid rgba(255,255,255,0.1);
 .profile-form{
 display:flex;
 flex-direction:column;
-gap:15px;
-max-width:300px;
+gap:14px;
+max-width:320px;
+}
+
+.profile-form label{
+font-size:13px;
+color:var(--text-dim);
 }
 
 .profile-form input{
-padding:10px;
-border-radius:6px;
-border:none;
+padding:11px 13px;
+border-radius:8px;
+border:1px solid var(--border);
+background:rgba(255,255,255,0.04);
+color:var(--text);
+font-family:inherit;
+outline:none;
+transition:border-color .2s ease;
+}
+
+.profile-form input:focus{
+border-color:var(--accent);
 }
 
 /* PLANES */
 
 .plans-grid{
 display:flex;
-gap:30px;
+gap:26px;
 flex-wrap:wrap;
 }
 
 .plan-card{
-background:rgba(255,255,255,0.05);
-padding:30px;
-border-radius:16px;
+background:var(--surface);
+padding:28px;
+border-radius:14px;
 width:220px;
 text-align:center;
-border:1px solid rgba(255,255,255,0.1);
+border:1px solid var(--border);
+}
+
+.plan-card h3{
+font-size:17px;
+margin-bottom:8px;
+}
+
+.plan-card p{
+font-family:'Space Grotesk',sans-serif;
+font-size:24px;
+font-weight:700;
+margin-bottom:18px;
 }
 
 .plan-card.featured{
-border:2px solid #10c668;
+border:1px solid var(--accent);
+background:linear-gradient(180deg, var(--accent-soft), var(--surface) 60%);
 }
